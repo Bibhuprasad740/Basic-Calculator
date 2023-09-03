@@ -11,6 +11,7 @@ body {
 
 #main-container {
     padding: 3%;
+    color: antiquewhite;
     background-color: rgba(0, 0, 0, 0.76);
     border-radius: 15px;
     box-shadow: black 30px 30px 30px;
@@ -18,18 +19,19 @@ body {
 
 #top-section {
     background-color: rgb(39, 41, 56);
-    color: white;
+    color: antiquewhite;
     border-radius: 10px;
 }
 
-#top-section input {
+#top-section p {
     width: 100%;
-    padding: 8% 4%;
+    padding: 6% 4%;
     text-align: right;
     background-color: transparent;
-    font-size: 35px;
+    font-size: 45px;
+    font-weight: bold;
     border-radius: 10px;
-    color: white;
+    color: antiquewhite;
     border: none;
 }
 
@@ -50,23 +52,34 @@ body {
     font-size: 25px;
     background-color: antiquewhite;
     font-weight: bold;
-    box-shadow: rgb(90, 85, 99) 3px 3px;
+    box-shadow: rgb(127, 125, 132) 4px 4px;
     border: none;
+}
+
+.btn:hover {
+    background-color: rgb(53, 55, 75);
+    color: antiquewhite;
+    box-shadow: black 0px 0px 0px;
 }
 
 #del-btn {
     background-color: rgba(129, 2, 2, 0.155);
     color: antiquewhite;
+    font-size: 15px;
+    box-shadow: rgb(25, 24, 28) 3px 3px;
 }
 
 #reset-btn {
     grid-column: span 2;
     color: antiquewhite;
     background-color: rgba(129, 2, 2, 0.155);
+    font-size: 15px;
+    box-shadow: rgb(25, 24, 28) 3px 3px;
 }
 
 #equalto-btn {
     grid-column: span 2;
     color: antiquewhite;
     background-color: rgb(129, 2, 2);
+    box-shadow: rgb(25, 24, 28) 3px 3px;
 }
