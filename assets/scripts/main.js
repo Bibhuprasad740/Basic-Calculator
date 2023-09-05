@@ -19,11 +19,21 @@ function canPlaceDot(outputWindow) {
 }
 
 function updateOutput(clickedButton, outputWindow) {
+    if (outputWindow.innerHTML == 'Infinity') {
+        outputWindow.innerHTML = '0';
+        if (clickedButton.isOperator) {
+            return;
+        }
+    }
     if (clickedButton.isOperator && !canPlaceOperator(outputWindow)) {
         return;
     }
     if (outputWindow.innerHTML == '0') {
-        outputWindow.innerHTML = clickedButton.value;
+        if (clickedButton.isOperator) {
+            outputWindow.innerHTML += ` ${clickedButton.value} `;
+        } else {
+            outputWindow.innerHTML = clickedButton.value;
+        }
     } else {
         if (clickedButton.isOperator) {
             outputWindow.innerHTML += ` ${clickedButton.value} `;
@@ -37,6 +47,10 @@ function updateOutput(clickedButton, outputWindow) {
 }
 
 function deleteOneCharFromRight(outputWindow) {
+    if (outputWindow.innerHTML == 'Infinity') {
+        outputWindow.innerHTML = '0';
+        return;
+    }
     let currentStr = outputWindow.innerHTML;
     if (currentStr.length == 1) {
         currentStr = '0';
